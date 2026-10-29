@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar JavaScript</title>
+</head>
+<body>
+    <h1>Belajar JavaScript</h1>
+
+    <label>Masukkan Nama:</label>
+    <input type="text" id="nama">
+    <button onclick="sapa()">Klik Saya</button>
+
+    <p id="hasil"></p>
+
+    <script>
+        function sapa() {
+            let nama = document.getElementById("nama").value;
+
+            if (nama === "") {
+                alert("Silakan masukkan nama!");
+                return;
+            }
+
+            alert("Halo, " + nama + "!");
+            console.log("Nama yang dimasukkan: " + nama);
+
+            let jawaban = prompt("Apa hobi kamu?");
+
+            document.getElementById("hasil").innerHTML =
+                "Selamat belajar JavaScript, " + nama +
+                "! Hobi kamu: " + (jawaban || "Belum diisi");
+        }
+    </script>
+</body>
+</html>
